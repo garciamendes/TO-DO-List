@@ -1,0 +1,58 @@
+#container-modal {
+  z-index: 999;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+
+  .container-modal {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+    border-radius: 20px;
+    padding: 1%;
+    width: 420px;
+    background: #fff;
+
+    p {
+      color: #333;
+      font-size: 20px;
+    }
+
+    img {
+      height: 150px;
+      margin-bottom: 13%;
+    }
+  }
+
+  .content-btn-not-and-yes {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+
+    .btn-not-and-yes {
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+      width: 210px;
+      height: 53px;
+      background: #C4C4C4;
+      border-radius: 0px 0px 0px 20px;
+    }
+
+    .btn-delete {
+      color: #fff;
+      background: #34A853;
+      border-radius: 0px 0px 20px 0px;
+    }
+  }
+}

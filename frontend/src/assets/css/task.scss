@@ -1,0 +1,33 @@
+.list-task {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1%;
+
+  .content-task {
+    width: 100%;
+    color: #fff;
+    word-wrap: break-word;
+    max-width: 80%;
+    font-size: 20px;
+    padding: 1% 1%;
+    border-radius: 10px;
+    background: rgba(15, 1, 64, 0.9);
+  }
+
+  .btn-content-list-tasks {
+    cursor: pointer;
+    display: flex;
+    margin-left: 1%;
+    padding: 0 2%;
+    height: 70px;
+    width: 7%;
+    align-items: center;
+    border-radius: 10px;
+    background: rgba(15, 1, 64, 0.9);
+  }
+
+  .content-delete {
+    background: #FF0000;
+  }
+}
