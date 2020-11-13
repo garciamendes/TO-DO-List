@@ -45,7 +45,7 @@ function Login() {
         </form>
 
         <div className='content-btn'>
-          <Button style='btn-submit-enter' title='Entrar' click={() => alert('sdasdas')}/>
+          <Button style='btn-submit-enter' title='Entrar' />
           <Link to='sign-in' className='Create-an-account'>Criar uma conta</Link>
         </div>
       </div>
