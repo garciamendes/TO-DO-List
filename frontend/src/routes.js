@@ -8,6 +8,7 @@ import {
 // Local import
 import Login from './pages/Login'
 import SignIn from './pages/SignIn'
+import Home from './pages/Home'
 
 function Routes() {
   return (
@@ -15,6 +16,7 @@ function Routes() {
       <Switch>
         <Route path='/' exact component={Login}/>
         <Route path='/sign-in' exact component={SignIn}/>
+        <Route path='/home' exact component={Home}/>
       </Switch>
     </BrowserRouter>
   )
