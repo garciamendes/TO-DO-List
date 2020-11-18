@@ -18,5 +18,7 @@ const Route = use('Route')
 
 Route.post('/register', 'AuthController.register')
 Route.post('/login', 'AuthController.login')
+Route.post("/add-task", "AddTaskController.AddTask")
 
 Route.get('/users', 'AuthController.show')
+Route.get("/list-tasks", "AddTaskController.ListTasks")
