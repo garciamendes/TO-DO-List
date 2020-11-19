@@ -22,3 +22,5 @@ Route.post("/add-task", "AddTaskController.AddTask")
 
 Route.get('/users', 'AuthController.show')
 Route.get("/list-tasks", "AddTaskController.ListTasks")
+
+Route.delete("/delete-tasks/:id", "AddTaskController.destroy");

@@ -1,7 +1,13 @@
 function Inputs(props) {
   return (
     <>
-      <input className={props.style} type={props.type} id={props.id} placeholder={props.placeholder}/>
+      <input
+        className={props.style}
+        type={props.type}
+        id={props.id}
+        value={props.value}
+        onChange={props.onChangeText}
+        placeholder={props.placeholder}/>
     </>
   )
 }
