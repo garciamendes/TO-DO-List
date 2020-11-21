@@ -25,4 +25,4 @@ The <strong> Task List </strong> was created to list and organize your tasks, so
 
 #### Running your project
 - In frontend run: ```npm start``` 
-- In backend run: ``adonis serve --dev```
+- In backend run: ```adonis serve --dev```
