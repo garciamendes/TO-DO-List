@@ -1,7 +1,8 @@
 // React import
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 // Third party import
+import Lottie from "react-lottie";
 import { BsToggleOff, BsToggleOn, BsPlus } from 'react-icons/bs'
 import { HiOutlineSun } from 'react-icons/hi'
 import { FiMoon, FiLogIn } from 'react-icons/fi'
@@ -10,7 +11,8 @@ import { toast } from "react-toastify";
 // Local import
 import '../assets/css/home.scss'
 import api from '../services/api'
-import SearchList from '../assets/images/search-list.svg'
+import animationSearchTask from '../assets/lottie/searchask.json'
+//import SearchList from '../assets/images/search-list.svg'
 import Inputs from '../components/Inputs'
 import Button from '../components/Button'
 import Task from '../components/Task'
@@ -22,6 +24,15 @@ function Home() {
   const [ dark, setDark ] = useState(false)
   const [ showModal, setShowModal ] = useState(false)
   const [ taskId, setTaskId ] = useState(null)
+
+  const searchTaskNo = {
+    loop: true,
+    autoplay: true,
+    animationData: animationSearchTask,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
 
   function toggleDark() {
     setDark(dark ? false : true)
@@ -57,7 +68,6 @@ function Home() {
       toast.success("Task successfully deleted");
       setShowModal(false);
     } catch (err) {
-
       toast.error("Error deleting task, please try again");
     }
   }
@@ -134,11 +144,7 @@ function Home() {
                 <>
                   <div className="content-no-task">
                     <p className="title-no-task">No task found!</p>
-                    <img
-                      src={SearchList}
-                      className="img-no-task"
-                      alt="Search list"
-                    />
+                    <Lottie options={searchTaskNo} height={400} width={400} />
                   </div>
                 </>
               ) : (
@@ -149,8 +155,8 @@ function Home() {
                       content={tasks.task}
                       onClickCheckTask={() => alert("Task Confirm")}
                       onClickConfirmDelete={() => {
-                        setShowModal(true)
-                        setTaskId(tasks.id)
+                        setShowModal(true);
+                        setTaskId(tasks.id);
                       }}
                     />
                   ))}
