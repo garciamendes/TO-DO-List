@@ -12,7 +12,6 @@ import { toast } from "react-toastify";
 import '../assets/css/home.scss'
 import api from '../services/api'
 import animationSearchTask from '../assets/lottie/searchask.json'
-//import SearchList from '../assets/images/search-list.svg'
 import Inputs from '../components/Inputs'
 import Button from '../components/Button'
 import Task from '../components/Task'
